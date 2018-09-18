@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="recipe">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Recipe</title>
+
+	<link rel="stylesheet" href="/styles/grid.css" />
+	<link rel="stylesheet" href="/styles/main.css" />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="core.js"></script>
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+		<header class="gr-12">
+			<nav class="">
+				<ul id="nav-primary">
+					<li><a><img src="" alt="logo"></a></li>
+					<li><a>Home</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="recipe container">
+			<div class="ingredients">
+				<div class="ingredient" ng-repeat="ingredient in recipe.ingredients">
+					{{ingredient.name}}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
