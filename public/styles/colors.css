@@ -1,5 +1,6 @@
 body{
 	background-color:#eee;
+	color: #7F4949;
 }
 
 header{
@@ -10,13 +11,20 @@ a{
 }
 
 h2{
-	color: #eee;
+	color: #7F2323;
 }
 
 .ingredients, .step{
-	background-color: #FF4646;
+	background-color: #eee;
 	color: #eee;
 
+}
+.step{
+	
+	border-top: 3px solid #ff4646;
+}
+.ingredients{
+	border-right: 3px solid #FF4646;
 }
 .control{
 	background-color: #FF9393;
