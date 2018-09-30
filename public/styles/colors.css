@@ -1,0 +1,23 @@
+body{
+	background-color:#eee;
+}
+
+header{
+	background-color: #CC3838;
+}
+a{
+	color:#FF9393;
+}
+
+h2{
+	color: #eee;
+}
+
+.ingredients, .step{
+	background-color: #FF4646;
+	color: #eee;
+
+}
+.control{
+	background-color: #FF9393;
+}

@@ -1,0 +1,72 @@
+.content{
+	width:100%;
+	box-sizing: border-box;
+	padding:0 30px;
+	display:grid;
+	grid-template-columns: calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px)
+		calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px) calc(8.4% - 20px);
+	grid-template-rows: 10vh 65vh 20vh auto;
+
+	grid-column-gap: 20px;
+	grid-template-areas: "ingredients ingredients ingredients sctrl sctrl sctrl sctrl sctrl sctrl sctrl sctrl sctrl"
+		"ingredients ingredients ingredients steps steps steps steps steps steps steps steps steps"
+		"desc desc desc desc desc desc desc desc desc side side side"
+		"comments comments comments comments comments comments comments comments comments side side side";
+}
+.ingredients{
+	box-sizing: content-box;
+	grid-area: ingredients;
+	border-radius:1px;
+	padding:20px;
+}
+.steps{
+	box-sizing: content-box;
+	grid-area: steps;
+	display: flex;
+	flex-wrap: wrap;
+}
+.step-controlls{
+	grid-area: sctrl;
+	width: 100%;
+	margin-bottom: 20px;
+	flex-grow: 1;
+}
+
+.step{
+	width: calc(33.33% - 20px);
+	margin-right: 20px;
+	margin-bottom: 20px;
+	flex-grow: 1;
+}
+.step .recipeImg{
+	width: 100%;
+	height:100%;
+}
+.step:nth-child(3n){
+	margin-right: 0px;
+}
+.step:nth-child(n+4){
+	margin-bottom: 0px;
+}
+/*remove later*/
+.step:nth-child(n+7){
+	display:none;
+}
+
+.step.hidden{
+	display:none;
+}
+
+.step{
+	padding:20px;
+}
+.steps>div{
+	border-radius: 	1px;
+}
+.recipeImg{
+	background-size: cover;
+}
+
+.ingredients-list{
+	width:100%;
+}

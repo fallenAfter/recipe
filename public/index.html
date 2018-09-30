@@ -7,25 +7,44 @@
 
 	<link rel="stylesheet" href="/styles/grid.css" />
 	<link rel="stylesheet" href="/styles/main.css" />
+	<link rel="stylesheet" href="/styles/colors.css">
+	<link rel="stylesheet" href="/styles/recipe.css" />
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
     <script src="core.js"></script>
 </head>
 <body ng-controller="mainController">
-	<div class="container">
-		<header class="gr-12">
+	<div class="">
+		<header class="layer-1">
+			<div class="logo"><a><img src="" alt="logo"></a></div>
+			<div class="title" ng-model="recipe.title">{{recipe.title}}</div>
 			<nav class="">
 				<ul id="nav-primary">
-					<li><a><img src="" alt="logo"></a></li>
 					<li><a>Home</a></li>
 				</ul>
 			</nav>
 		</header>
-		<div class="recipe container">
-			<div class="ingredients">
-				<div class="ingredient" ng-repeat="ingredient in recipe.ingredients">
-					{{ingredient.name}}
+		<div class="recipe content">
+			<div class="ingredients layer-1">
+				<h2>Ingredients</h2>
+				<table class="ingredients-list">
+					<tr ng-repeat="ingredient in recipe.ingredients">
+						<td>{{ingredient.name}}</td>
+						<td>{{ingredient.ammount}}</td>
+						<td>{{ingredient.measurment}}</td>
+					</tr>
+				</table>
+			</div>
+			<div class="step-controlls">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="steps">
+				<div ng-repeat="step in steps.tiles" class="step layer-1">
+					<ng-include src="getTileInclude(step)"></ng-include>
+					
 				</div>
 			</div>
 		</div>
