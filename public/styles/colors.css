@@ -24,7 +24,8 @@ h2{
 	border-top: 3px solid #ff4646;
 }
 .ingredients{
-	border-right: 3px solid #FF4646;
+	background-color:#FF9393;
+	/*border-right: 3px solid #FF4646;*/
 }
 .control{
 	background-color: #FF9393;
